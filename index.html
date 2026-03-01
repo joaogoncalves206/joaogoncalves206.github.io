@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>João Pedro Gonçalves Rodrigues — Portfólio</title>
+
+  <style>
+    :root{
+      --bg:#070A12;
+      --card:rgba(255,255,255,.06);
+      --line:rgba(255,255,255,.12);
+      --text:#EEF2FF;
+      --muted:#B9C2E3;
+      --muted2:#90A0D0;
+      --accent:#7C3AED;
+      --accent2:#22D3EE;
+      --radius:18px;
+    }
+
+    *{box-sizing:border-box;}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      color:var(--text);
+      background:
+        radial-gradient(900px 600px at 15% 10%, rgba(124,58,237,.35), transparent 60%),
+        radial-gradient(800px 500px at 85% 15%, rgba(34,211,238,.25), transparent 60%),
+        var(--bg);
+      line-height:1.6;
+    }
+
+    a{text-decoration:none;color:inherit;}
+
+    .wrap{max-width:1100px;margin:0 auto;padding:30px 20px;}
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      padding:12px 18px;
+      border:1px solid var(--line);
+      border-radius:999px;
+      background:rgba(0,0,0,.3);
+      backdrop-filter:blur(10px);
+    }
+
+    nav a{
+      margin:0 10px;
+      color:var(--muted);
+      font-size:14px;
+    }
+
+    nav a:hover{color:var(--text);}
+
+    .btn{
+      padding:8px 14px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.05);
+      font-size:14px;
+      font-weight:600;
+    }
+
+    .btn.primary{
+      background:linear-gradient(135deg,var(--accent),var(--accent2));
+      border:none;
+      color:white;
+    }
+
+    .hero{
+      margin-top:30px;
+      padding:40px 30px;
+      border-radius:var(--radius);
+      background:linear-gradient(180deg, rgba(255,255,255,.08), rgba(255,255,255,.03));
+      border:1px solid var(--line);
+    }
+
+    h1{
+      font-size:42px;
+      margin-bottom:10px;
+    }
+
+    .subtitle{
+      color:var(--muted);
+      max-width:700px;
+    }
+
+    .section{
+      margin-top:40px;
+      padding:25px;
+      border-radius:var(--radius);
+      border:1px solid var(--line);
+      background:var(--card);
+    }
+
+    h2{
+      margin-top:0;
+      font-size:22px;
+    }
+
+    .chips{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:15px;
+    }
+
+    .chip{
+      padding:8px 12px;
+      border-radius:999px;
+      border:1px solid var(--line);
+      background:rgba(0,0,0,.2);
+      font-size:13px;
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:40px;
+      text-align:center;
+      font-size:13px;
+      color:var(--muted2);
+    }
+
+  </style>
+</head>
+
+<body>
+
+<div class="wrap">
+
+<header>
+  <strong>João Pedro G. Rodrigues</strong>
+  <nav>
+    <a href="#sobre">Sobre</a>
+    <a href="#habilidades">Habilidades</a>
+    <a href="#formacao">Formação</a>
+    <a href="#contato">Contato</a>
+  </nav>
+  <div>
+    <a class="btn primary" href="https://github.com/joaogoncalves206" target="_blank">GitHub</a>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Estudante de Ciência da Computação</h1>
+  <p class="subtitle">
+    Técnico em Análise de Dados / Big Data. Atualmente no 1º período de Ciência da Computação na Faculdade Gran, Rio de Janeiro.
+    Construindo base sólida em programação, desenvolvimento web e fundamentos da computação.
+  </p>
+</section>
+
+<section class="section" id="sobre">
+  <h2>Sobre mim</h2>
+  <p>
+    Sou estudante de Ciência da Computação com formação técnica em Análise de Dados.
+    Tenho experiência com Python e MySQL e atualmente estou aprofundando meus conhecimentos em HTML, CSS e JavaScript.
+    Busco evoluir constantemente através de projetos práticos e desafios.
+  </p>
+</section>
+
+<section class="section" id="habilidades">
+  <h2>Habilidades</h2>
+  <div class="chips">
+    <div class="chip">Python</div>
+    <div class="chip">MySQL</div>
+    <div class="chip">PowerPoint</div>
+    <div class="chip">HTML</div>
+    <div class="chip">CSS</div>
+    <div class="chip">JavaScript</div>
+  </div>
+</section>
+
+<section class="section" id="formacao">
+  <h2>Formação</h2>
+  <p><strong>Ciência da Computação</strong> — Faculdade Gran (Rio de Janeiro) — 1º período</p>
+  <p><strong>Técnico em Análise de Dados / Big Data</strong> — Python, MySQL e análise de dados</p>
+</section>
+
+<section class="section" id="contato">
+  <h2>Contato</h2>
+  <p>Email: <a href="mailto:joaopedropessoal434@gmail.com">joaopedropessoal434@gmail.com</a></p>
+  <p>GitHub: <a href="https://github.com/joaogoncalves206" target="_blank">github.com/joaogoncalves206</a></p>
+</section>
+
+<footer>
+  © <span id="year"></span> João Pedro Gonçalves Rodrigues • Rio de Janeiro
+</footer>
+
+</div>
+
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
